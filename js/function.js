@@ -24,38 +24,38 @@ $(document).ready(function(){
 		Speaker = snap.val().Speaker;
 
 		if( Light == "On"){   
-			light.src ="/public/img/lighton.png";
+			light.src ="../img/lighton.png";
 			document.getElementById("unact").style.display = "none";
 			document.getElementById("act").style.display = "block";
 		} else {
-			light.src = "/public/img/lightoff.png";
+			light.src = "../img/lightoff.png";
 			document.getElementById("unact").style.display = "block";
 			document.getElementById("act").style.display = "none";
 		}
 		if( Fan == "On"){   
-			fan.src ="/public/img/fanon.png";
+			fan.src ="../img/fanon.png";
 			document.getElementById("unact1").style.display = "none";
 			document.getElementById("act1").style.display = "block";
 		} else {
-			fan.src ="/public/img/fanoff.png";
+			fan.src ="../img/fanoff.png";
 			document.getElementById("unact1").style.display = "block";
 			document.getElementById("act1").style.display = "none";
 		}
 		if( Conditioner == "On"){    
-			conditioner.src ="/public/img/conditioneron.png";
+			conditioner.src ="../img/conditioneron.png";
 			document.getElementById("unact2").style.display = "none";
 			document.getElementById("act2").style.display = "block";
 		} else {
-			conditioner.src ="/public/img/conditioneroff.png"
+			conditioner.src ="../img/conditioneroff.png"
 			document.getElementById("unact2").style.display = "block";
 			document.getElementById("act2").style.display = "none";
 		}
 		if( Speaker == "On"){ 
-			speaker.src = "/public/img/speakeron.png";   
+			speaker.src = "../img/speakeron.png";   
 			document.getElementById("unact3").style.display = "none";
 			document.getElementById("act3").style.display = "block";
 		} else {
-			speaker.src ="/public/img/speakeroff.png";
+			speaker.src ="../img/speakeroff.png";
 			document.getElementById("unact3").style.display = "block";
 			document.getElementById("act3").style.display = "none";
 		}
