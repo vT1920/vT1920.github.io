@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My home </title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
+  
+    <script src="/public/js/function.js"></script>
+    <script src="/public/js/all.min.js"></script>
+    <script src="/public/js/moment.js"></script>
+   
+
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                    <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                    <span class="title">My home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+                    <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Members</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <span class="title">Note</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    <!--main -->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <img src="/public/img/list.png">
+            </div>
+            <h1>Welcome Home</h1>
+            <div class="user">
+                <img src="/public/img/user.png" width="60px" height="60px">
+            </div>
+        </div>
+
+        <div class="cardBox">
+            <div class="cardImg">
+                <div class="img">
+                    <img src="/public/img/home.jpg">
+                </div>
+            </div> 
+               
+            <div class="row">
+                <div class="column2">
+                    <div class = "wrapper">
+                        <div class="column2">
+                            <img id="light" src="/public/img/lightoff.png">
+                        </div>
+                        <h3 class="titleCard">Light</h3>
+                        <div class = "progress">
+                            <div class = "toggle-btn" id ="unact">
+                                <div class = "inner-circle"></div>
+                            </div>
+                            <div class = "toggle-btn active" id ="act">
+                                <div class = inner-circle></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column2">
+                    <div class = "wrapper">
+                        <div class="column2">
+                            <img id="fan" src="/public/img/fanoff.png">
+                        </div>
+                        <h3 class="titleCard">Fan</h3>
+                        <div class = "progress">
+                            <div class = "toggle-btn1" id ="unact1">
+                                <div class = "inner-circle"></div>
+                            </div>
+                            <div class = "toggle-btn1 active" id ="act1">
+                                <div class = inner-circle></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>   
+            <div class="row">
+                <div class="column2">
+                    <div class = "wrapper">
+                        <div class="column2">
+                            <img id="conditioner" src="/public/img/conditioneroff.png">
+                        </div>
+                        <h3 class="titleCard">Conditioner</h3>
+                        <div class = "progress">
+                            <div class = "toggle-btn2" id ="unact2">
+                                <div class = "inner-circle"></div>
+                            </div>
+                            <div class = "toggle-btn2 active" id ="act2">
+                                <div class = inner-circle></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column2">
+                    <div class = "wrapper">
+                        <div class="column2">
+                            <img id="speaker" src="/public/img/speakeroff.png">
+                        </div>
+                        <h3 class="titleCard">Speaker</h3>
+                        <div class = "progress">
+                            <div class = "toggle-btn3" id ="unact3">
+                                <div class = "inner-circle"></div>
+                            </div>
+                            <div class = "toggle-btn3 active" id ="act3">
+                                <div class = inner-circle></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div> 
+        <div class="div_right">
+            <div class="main-section">
+                <div class="search-bar">
+                    <input type="text" name="search-city" id="search-input" placeholder="Search city">
+                </div>
+                <div class="info-wrapper">
+                    <p class="city-name">--</p>
+                    <p class="weather-state">--</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+                    <p class="temperature">--</p>
+                </div>
+            </div>
+            <div class="additional-section">
+                <div class="row">
+                    <div class="item">
+                        <div class="label">MT Mọc</div>
+                        <div class="value sunrise">--</div>
+                    </div>
+                    <div class="item">
+                        <div class="label">MT Lặn</div>
+                        <div class="value sunset">--</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="label">Độ ẩm</div>
+                        <div class="value"><span class="humidity">--</span>%</div>
+                    </div>
+                    <div class="item">
+                        <div class="label">Gió</div>
+                        <div class="value"><span class="wind-speed">--</span> km/h</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="/public/js/weather.js"></script>
+<script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+
+    toggle.onclick = function(){
+        navigation.classList.toggle('active');
+        main.classList.toggle('active');
+
+    }
+    let list = document.querySelectorAll('.navigation li');
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+    }
+    list.forEach((item) =>
+    item.addEventListener('mouseover',activeLink));
+</script>
+</html>

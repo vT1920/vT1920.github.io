@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url(/public/css/navigation.css);
+@import url(/public/css/card.css);
+@import url(/public/css/weather.css);
+@import url(/public/css/topbar.css);
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --blue:#3d85f8c7;
+    --white:#fff;
+    --grey:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
+    --black3:#031321;
+    --gradient: linear-gradient(to left top, #44d6e9 10%, #3599f7 90%);
+}
+
+body
+{
+    background: #F6F6F6;
+    min-width: 100vh;
+    overflow-x: hidden;
+}
+.container
+{
+    position: relative;
+    width:100%;
+}
+.cardBox
+{
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    background:var(--grey);
+}
+.main
+{
+    position: absolute;  
+    width: calc(100% - 250px);
+    left: 250px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.main.active
+{
+    width: calc(100% - 100px);
+    left:100px ;
+    
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.div_right
+{
+    padding: 15px;
+    float: right;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    background: linear-gradient(145deg, #2193b0, #6dd5ed);
+}
+
+@media (max-width:768px) 
+{
+    .details
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .recentOders
+    {
+        overflow-x: auto;
+    }
+    .status.inprogress
+    {
+        white-space:nowrap ;
+    }   
+    .toggle-btn, 
+    .toggle-btn1, 
+    .toggle-btn2, 
+    .toggle-btn3{
+        min-width: 20px;
+    }
+}
